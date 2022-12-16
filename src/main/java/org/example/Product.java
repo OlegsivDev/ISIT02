@@ -1,17 +1,18 @@
 package org.example;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class Product {
     private String title;
     private String manufacturer;
-    private Calendar dateOfManufacture;
-    private Calendar dateOfExpiration;
+    private Date dateOfManufacture;
+    private Date dateOfExpiration;
     private Integer quantity;
 
     private Integer price;
 
-    public Product(String title, String manufacturer, Calendar dateOfManufacture, Calendar dateOfExpiration, Integer quantity, Integer price) {
+    public Product(String title, String manufacturer, Date dateOfManufacture, Date dateOfExpiration, Integer quantity, Integer price) {
         this.title = title;
         this.manufacturer = manufacturer;
         this.dateOfManufacture = dateOfManufacture;

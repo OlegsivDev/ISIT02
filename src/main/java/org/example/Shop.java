@@ -2,9 +2,16 @@ package org.example;
 
 import java.util.LinkedList;
 
-public class Shop extends Storage{
+public class Shop extends Storage {
     private LinkedList<Employee> employees = new LinkedList<>();
-    private LinkedList<Product> displayedProducts = new LinkedList<>();
+    public LinkedList<Product> displayedProducts = new LinkedList<>();
+    public Storage storage;
+
+    public Shop(LinkedList<Employee> employees, LinkedList<Product> displayedProducts, Storage storage) {
+        this.employees = employees;
+        this.displayedProducts = displayedProducts;
+        this.storage = storage;
+    }
 
     public void addEmployee(Employee employee) {
 
@@ -18,6 +25,7 @@ public class Shop extends Storage{
         employees.add(employee);
     }
 
+    // TODO: Complete moveProductFunction
     public void moveProductByName() {
 
     }

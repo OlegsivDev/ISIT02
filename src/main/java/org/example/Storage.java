@@ -10,6 +10,7 @@ public class Storage {
     }
 
     public void printAllProducts() {
+        System.out.println("Printing all products in storage:");
         for (int i = 0; i < storageProducts.size(); i++) {
             printProduct(storageProducts.get(i));
         }
