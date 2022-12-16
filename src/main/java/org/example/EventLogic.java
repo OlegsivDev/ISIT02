@@ -5,8 +5,8 @@ import java.util.Random;
 import java.util.Stack;
 
 public class EventLogic {
-    private Stack<IRandomEvent> stack = new Stack<>();
-    private ArrayList<IRandomEvent> eventVariations = new ArrayList<>();
+    private Stack<Event> stack = new Stack<>();
+    private ArrayList<Event> eventVariations = new ArrayList<>();
 
     private Shop shop;
 
@@ -16,7 +16,9 @@ public class EventLogic {
         this.eventVariations = eventVariations;
         this.shop = shop;
         eventVariations.add(new EventAddToStorage());
-//        eventVariations.add(new EventMoveToDisplay());
+        eventVariations.add(new EventMoveToDisplay());
+        eventVariations.add(new EventCustomerBoughtProduct());
+        eventVariations.add(new EventProductOnDiscount());
     }
 
     public void addRandomEvent() {

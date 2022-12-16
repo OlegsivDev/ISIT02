@@ -12,6 +12,16 @@ public class Product {
 
     private Integer price;
 
+    private Integer discount;
+
+    public Integer getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(Integer discount) {
+        this.discount = discount;
+    }
+
     public Product(String title, String manufacturer, Date dateOfManufacture, Date dateOfExpiration, Integer quantity, Integer price) {
         this.title = title;
         this.manufacturer = manufacturer;
@@ -19,6 +29,7 @@ public class Product {
         this.dateOfExpiration = dateOfExpiration;
         this.quantity = quantity;
         this.price = price;
+        this.discount = null;
     }
 
     public Integer getQuantity() {
@@ -35,5 +46,13 @@ public class Product {
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public Integer getPrice() {
+        return price;
     }
 }

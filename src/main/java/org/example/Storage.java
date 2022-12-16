@@ -1,5 +1,6 @@
 package org.example;
 
+import java.lang.reflect.Array;
 import java.util.LinkedList;
 
 public class Storage {
@@ -10,10 +11,13 @@ public class Storage {
     }
 
     public void printAllProducts() {
-        System.out.println("Printing all products in storage:");
-        for (int i = 0; i < storageProducts.size(); i++) {
-            printProduct(storageProducts.get(i));
+        for (int i = 0; i < this.storageProducts.size(); i++) {
+            printProduct(this.storageProducts.get(i));
         }
+    }
+
+    protected LinkedList<Product> getAllProducts(){
+        return storageProducts;
     }
 
     private void printProduct(Product product) {
